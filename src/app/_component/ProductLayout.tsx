@@ -22,7 +22,7 @@ const ProductLayout = ({name, project}: detail) => {
             </div>
             <div className='w-full bg-white rounded-xl p-2'>
                 <div className='w-full h-full relative overflow-hidden rounded-xl'>
-                    <Image src={project} alt='Project-1' width={600} height={1024} className='w-full h-[60vh] max-lg:h-[50vh] max-sm:h-[40vh] group-hover:scale-110 duration-500 rounded-xl object-cover object-top'></Image>
+                    <Image src={project} alt='Project-1' width={1500} height={1024} className='w-full h-[60vh] max-lg:h-[50vh] max-sm:h-[40vh] group-hover:scale-110 duration-500 rounded-xl object-cover object-top'></Image>
                     <div className='absolute top-[50%] left-[50%] -translate-[50%] z-10 group-hover:scale-75 duration-300'>
                         <h1 className='text-4xl font-semibold text-white'>{name}</h1>
                     </div>

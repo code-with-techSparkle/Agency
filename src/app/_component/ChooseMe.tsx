@@ -30,7 +30,7 @@ const ChooseMe = () => {
             <Image
               src='https://ik.imagekit.io/qss3mmw4a/Agency/1.webp?updatedAt=1752586511519'
               alt='Project'
-              width={2000}
+              width={1400}
               height={1000}
               className='w-full h-full object-cover object-center'
             />
@@ -46,41 +46,97 @@ const ChooseMe = () => {
           >
             <div className='flex gap-5 w-full h-full'>
               <div className='flex flex-col items-start justify-start w-1/3 gap-5'>
-                {Array(4).fill(0).map((_, i) => (
                   <Image
-                    key={`col1-${i}`}
-                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${i + 1}?updatedAt=1752587110754`}
-                    alt={`project-${i}`}
-                    width={331}
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-1.png?updatedAt=1752592398377'
+                    alt='Project-1'
+                    width={1500}
                     height={1000}
                     className='w-full h-60 object-cover object-top rounded-xl'
                   />
-                ))}
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-2.png?updatedAt=1752592398311'
+                    alt='Project-2'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-3.png?updatedAt=1752592397921'
+                    alt='Project-3'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-4.png?updatedAt=1752592398359'
+                    alt='Project-4'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+
 
               </div>
               <div className='flex flex-col items-center justify-center w-1/3 gap-5'>
-                {Array(5).fill(0).map((_, i) => (
                   <Image
-                    key={`col1-${i}`}
-                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${i + 4}?updatedAt=1752587110754`}
-                    alt={`project-${i + 4}`}
-                    width={331}
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-5.png?updatedAt=1752592396965'
+                    alt='project-5'
+                    width={1500}
                     height={1000}
                     className='w-full h-60 object-cover object-top rounded-xl'
                   />
-                ))}
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-6.png?updatedAt=1752592398298'
+                    alt='project-6'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-7.png?updatedAt=1752592397152'
+                    alt='project-7'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-8.png?updatedAt=1752592396814'
+                    alt='project-8'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+
               </div>
               <div className='flex flex-col items-end justify-end w-1/3 gap-5'>
-                {[9, 10, 3, 7].map((num, i) => (
                   <Image
-                    key={`col1-${i}`}
-                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${num}?updatedAt=1752587110754`}
-                    alt={`project-${num}`}
-                    width={331}
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-8.png?updatedAt=1752592396814'
+                    alt='project-9'
+                    width={1500}
                     height={1000}
                     className='w-full h-60 object-cover object-top rounded-xl'
                   />
-                ))}
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-5.png?updatedAt=1752592396965'
+                    alt='project-10'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-4.png?updatedAt=1752592398359'
+                    alt='project-11'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
+                  <Image
+                    src='https://ik.imagekit.io/qss3mmw4a/Agency/website-8.png?updatedAt=1752592396814'
+                    alt='project-12'
+                    width={1500}
+                    height={1000}
+                    className='w-full h-60 object-cover object-top rounded-xl'
+                  />
               </div>
 
             </div>
