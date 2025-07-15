@@ -24,13 +24,11 @@ const Faq: React.FC<FaqProps> = ({ faqInformation }) => {
   return (
     <div className='w-full h-full flex max-lg:flex-col py-20 max-lg:py-10 max-md:py-0 px-24 max-lg:px-14 max-sm:px-6'>
       
-      {/* Left Sticky Heading */}
-      <div className='w-1/2 h-full sticky top-24 max-lg:static max-lg:mb-10'>
+      <div className='w-1/2 h-full sticky top-24 max-lg:static max-lg:mb-10 max-lg:w-full'>
         <h1 className='text-7xl font-semibold'>FAQ&apos;s</h1>
       </div>
 
-      {/* Right FAQ List */}
-      <div className='w-1/2 h-full'>
+      <div className='w-1/2 h-full max-lg:w-full'>
         <div className='w-full space-y-6'>
           {faqInformation.map((faq, index) => (
             <div key={faq.id ?? index} className=''>

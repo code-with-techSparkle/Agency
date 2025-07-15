@@ -118,10 +118,10 @@ const Navbar = () => {
             <motion.li
               key={idx}
               variants={listItemVariants}
-              className="py-4 text-white text-5xl max-lg:text-4xl max-sm:text-3xl font-semibold capitalize hover:scale-105 transition-transform duration-200"
+              className="py-4 text-white text-5xl max-lg:text-4xl max-sm:text-3xl font-semibold capitalize hover:scale-105 transition-transform duration-500"
               onClick={() => setBurgerMenuActive(false)}
             >
-              <a href={`#${text}`}>{text}</a>
+              <Link href={`#${text}`}>{text}</Link>
             </motion.li>
           ))}
         </motion.ul>

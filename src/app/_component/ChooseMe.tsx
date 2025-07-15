@@ -44,8 +44,8 @@ const ChooseMe = () => {
             style={{ scale }}
             className='w-full h-full'
           >
-            <div className='flex gap-5 w-full h-full'>
-              <div className='flex flex-col items-start justify-start w-1/3 gap-5'>
+            <div className='flex gap-5 w-full h-full max-lg:gap-2'>
+              <div className='flex flex-col items-start justify-start w-1/3 gap-5 max-lg:gap-2'>
                   <Image
                     src='https://ik.imagekit.io/qss3mmw4a/Agency/website-1.png?updatedAt=1752592398377'
                     alt='Project-1'
@@ -77,7 +77,7 @@ const ChooseMe = () => {
 
 
               </div>
-              <div className='flex flex-col items-center justify-center w-1/3 gap-5'>
+              <div className='flex flex-col items-center justify-center w-1/3 gap-5 max-lg:gap-2'>
                   <Image
                     src='https://ik.imagekit.io/qss3mmw4a/Agency/website-5.png?updatedAt=1752592396965'
                     alt='project-5'
@@ -108,7 +108,7 @@ const ChooseMe = () => {
                   />
 
               </div>
-              <div className='flex flex-col items-end justify-end w-1/3 gap-5'>
+              <div className='flex flex-col items-end justify-end w-1/3 gap-5 max-lg:gap-2'>
                   <Image
                     src='https://ik.imagekit.io/qss3mmw4a/Agency/website-8.png?updatedAt=1752592396814'
                     alt='project-9'

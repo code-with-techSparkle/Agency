@@ -46,7 +46,7 @@ export default function Footer() {
               ].map((section, index) => (
                 <motion.div
                   key={index}
-                  className='flex flex-col gap-2 min-w-[150px] max-md:min-w-full'
+                  className='flex flex-col gap-2 min-w-[150px] max-md:min-w-[100px]'
                   variants={fadeUp}
                   custom={index}
                 >
