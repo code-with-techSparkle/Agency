@@ -121,7 +121,7 @@ const About = () => {
             <div className='text-black'>
               <h2 className='text-xl max-sm:text-lg font-semibold'>Ready to Build Something Great?</h2>
               <p className='text-lg max-sm:text-sm text-black/60 mt-1'>
-                Let&apos;s turn your vision into a standout website with stunning animation's
+                Let&apos;s turn your vision into a standout website with stunning animation&apos;s
               </p>
             </div>
           </div>
