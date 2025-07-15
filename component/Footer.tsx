@@ -2,8 +2,6 @@
 
 import React from 'react'
 import { motion, Variants, Transition } from 'framer-motion'
-
-// ✅ Type-safe fade-up variant with custom index-based animation
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
@@ -12,7 +10,7 @@ const fadeUp: Variants = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: [0.42, 0, 0.58, 1], // cubic bezier = easeOut
+      ease: [0.42, 0, 0.58, 1], 
     } as Transition,
   }),
 }
@@ -26,8 +24,6 @@ export default function Footer() {
       <div className='relative h-[calc(100vh+800px)] -top-[100vh]'>
         <div className='h-[800px] sticky top-[calc(100vh-800px)]'>
           <div className='bg-[#1F1F26] pt-32 max-sm:pt-40 pb-16 px-12 max-md:px-4 h-full w-full flex flex-col justify-between text-white'>
-
-            {/* Link Sections */}
             <motion.div
               className='flex flex-wrap gap-20'
               initial="hidden"
@@ -36,12 +32,16 @@ export default function Footer() {
             >
               {[
                 {
-                  heading: "About",
+                  heading: "Pages",
                   links: ["Home", "Projects", "Our Mission", "Contact Us"]
                 },
                 {
-                  heading: "Education",
-                  links: ["News", "Learn", "Certification", "Publications"]
+                  heading: "Technologies",
+                  links: ["Next.js", "React,js", "Tailwind css", "Framer motion"]
+                },
+                {
+                  heading: "No code",
+                  links: ["Framer website's", "Modern Design", "Advance Animation's", "Responsive"]
                 }
               ].map((section, index) => (
                 <motion.div

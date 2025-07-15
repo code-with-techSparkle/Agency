@@ -9,7 +9,7 @@ const ChooseMe = () => {
 
   const { scrollYProgress } = useScroll({
     target: scaleRef,
-    offset: ['start end', 'end start'], 
+    offset: ['start end', 'end start'],
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
@@ -20,19 +20,19 @@ const ChooseMe = () => {
         <div className='w-full h-full flex flex-col gap-6 overflow-hidden'>
           <div className='flex justify-between items-start max-md:flex-col max-md:text-center max-md:justify-center max-md:items-center'>
             <h2 className='text-5xl font-semibold max-w-2xl max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:max-w-full'>
-              The Danish Aesthetic: Minimalism meets meaning
+              What I&apos;m Do: Creative. Technical. Impactful.
             </h2>
             <p className='text-xl max-lg:text-lg max-md:text-sm text-black/50 max-w-sm text-right max-md:text-center max-md:max-w-full'>
-              In a world drowning in noise, design creates the silence necessary.
+              I help brands stand out by blending design and development into seamless digital experiences.
             </p>
           </div>
-          <div className='w-full h-full'>
+          <div className='w-full h-full rounded-2xl overflow-hidden'>
             <Image
-              src='https://ik.imagekit.io/qss3mmw4a/Cosmatics/utility4.jpg?updatedAt=1752579426018'
+              src='https://ik.imagekit.io/qss3mmw4a/Agency/1.webp?updatedAt=1752586511519'
               alt='Project'
               width={2000}
               height={1000}
-              className='w-full h-full object-cover'
+              className='w-full h-full object-cover object-center'
             />
           </div>
         </div>
@@ -49,35 +49,36 @@ const ChooseMe = () => {
                 {Array(4).fill(0).map((_, i) => (
                   <Image
                     key={`col1-${i}`}
-                    src='https://ik.imagekit.io/qss3mmw4a/Cosmatics/women-5-1.avif?updatedAt=1751102340720'
-                    alt={`person-1-${i}`}
-                    width={1000}
+                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${i + 1}?updatedAt=1752587110754`}
+                    alt={`project-${i}`}
+                    width={331}
                     height={1000}
-                    className='w-full h-60 object-cover rounded-xl'
+                    className='w-full h-60 object-cover object-top rounded-xl'
                   />
                 ))}
+
               </div>
               <div className='flex flex-col items-center justify-center w-1/3 gap-5'>
-                {Array(4).fill(0).map((_, i) => (
+                {Array(5).fill(0).map((_, i) => (
                   <Image
-                    key={`col2-${i}`}
-                    src='https://ik.imagekit.io/qss3mmw4a/Cosmatics/women-5-1.avif?updatedAt=1751102340720'
-                    alt={`person-2-${i}`}
-                    width={1000}
+                    key={`col1-${i}`}
+                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${i + 4}?updatedAt=1752587110754`}
+                    alt={`project-${i + 4}`}
+                    width={331}
                     height={1000}
-                    className='w-full h-60 object-cover rounded-xl'
+                    className='w-full h-60 object-cover object-top rounded-xl'
                   />
                 ))}
               </div>
               <div className='flex flex-col items-end justify-end w-1/3 gap-5'>
-                {Array(4).fill(0).map((_, i) => (
+                {[9, 10, 3, 7].map((num, i) => (
                   <Image
-                    key={`col3-${i}`}
-                    src='https://ik.imagekit.io/qss3mmw4a/Cosmatics/women-5-1.avif?updatedAt=1751102340720'
-                    alt={`person-3-${i}`}
-                    width={1000}
+                    key={`col1-${i}`}
+                    src={`https://ik.imagekit.io/qss3mmw4a/Agency/website-${num}?updatedAt=1752587110754`}
+                    alt={`project-${num}`}
+                    width={331}
                     height={1000}
-                    className='w-full h-60 object-cover rounded-xl'
+                    className='w-full h-60 object-cover object-top rounded-xl'
                   />
                 ))}
               </div>

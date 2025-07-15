@@ -5,17 +5,17 @@ import { useInView, motion, AnimatePresence } from 'framer-motion'
 
 const textBlocks = [
   {
-    text: 'I started my triathlon journey struggling with balance and technique. Now, I guide others to achieve their full potential.',
+    text: 'I craft custom websites using Next.js, React, and Tailwind CSS. Focused on performance, responsiveness.',
     image: 'https://ik.imagekit.io/qss3mmw4a/Cosmatics/men-1.avif?updatedAt=1751100375578',
     direction: 'none',
   },
   {
-    text: 'Through perseverance and training, I discovered my strengths and embraced the challenge of competition.',
+    text: 'I build stunning, responsive websites using Framer — no code required.',
     image: 'https://ik.imagekit.io/qss3mmw4a/Cosmatics/men-2.avif?updatedAt=1751100375678',
     direction: 'bottom',
   },
   {
-    text: 'Today, I help aspiring triathletes find their own path to success with personalized coaching and support.',
+    text: 'With a strong eye for design and motion, I bring interfaces to life. I create seamless user experiences.',
     image: 'https://ik.imagekit.io/qss3mmw4a/Cosmatics/men-3.avif?updatedAt=1751100375778',
     direction: 'right',
   },

@@ -34,21 +34,21 @@ const page = () => {
     },
     {
       id: 4,
-      question: 'What technologies do you specialize in?',
+      question: 'Do you build both code and no-code websites?',
       answer:
-        "I specialize in Next.js, TypeScript, Tailwind CSS, Framer Motion, and GSAP. I focus on building modern, high-performance websites with smooth animations and intuitive user experiences.",
+        "Yes! We offer custom-coded websites using frameworks like Next.js, as well as no-code builds using Framer for fast, flexible delivery.",
     },
     {
       id: 5,
-      question: 'Do you offer custom website development?',
+      question: 'Which is better: code or no-code?',
       answer:
-        "Yes, I create fully custom websites tailored to your needs, ensuring a unique design, fast performance, and engaging animations that enhance user experience and brand identity.",
+        "It depends on your needs. Code offers full control and scalability; no-code is faster and ideal for simpler projects or marketing sites.",
     },
     {
       id: 6,
-      question: 'Can you optimize an existing website?',
+      question: 'How long does a typical website project take?',
       answer:
-        'Absolutely! I improve website performance, enhance animations, refine UI/UX, and ensure responsiveness. My goal is to make your website faster, smoother, and more visually appealing.',
+        'Most projects take 1-3 weeks, depending on complexity, features, and feedback speed.',
     },
   ];
 

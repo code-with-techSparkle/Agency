@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   const [burgerMenuActive, setBurgerMenuActive] = useState(false);
@@ -44,7 +45,7 @@ const Navbar = () => {
     open: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.35, ease: [0.42, 0, 0.58, 1] }, // cubic-bezier
+      transition: { duration: 0.35, ease: [0.42, 0, 0.58, 1] },
     },
     closed: {
       y: 50,
@@ -64,15 +65,15 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center px-10 py-6 max-md:px-6 max-sm:px-4">
-        <a href="/" className="flex items-center gap-2 z-50">
+        <Link href="/" className="flex items-center gap-2 z-50">
           <span
-            className={`text-xl font-semibold transition-colors duration-300 ${
+            className={`text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-lg font-semibold transition-colors duration-300 ${
               burgerMenuActive ? "text-white" : "text-black"
             }`}
           >
             M.Tuaha
           </span>
-        </a>
+        </Link>
 
         <div
           className="w-10 max-lg:w-7 max-lg:h-5 h-6 relative cursor-pointer z-50"
@@ -113,7 +114,7 @@ const Navbar = () => {
           className="absolute top-[30vh] left-1/2 -translate-x-1/2 text-center"
           variants={menuVariants}
         >
-          {["home", "about", "portfolio", "contact"].map((text, idx) => (
+          {["home", "Projects", "Our Mission", "contact"].map((text, idx) => (
             <motion.li
               key={idx}
               variants={listItemVariants}

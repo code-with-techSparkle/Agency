@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="relative h-screen w-full overflow-hidden bg-gray-100 z-0">
         <Image
-          src="/hero-bg.png"
+          src="https://ik.imagekit.io/qss3mmw4a/Agency/pawel-czerwinski-tt2oZzLB1h8-unsplash.jpg?updatedAt=1752590240079"
           alt="Portrait"
           width={2560}
           height={1000}
@@ -19,10 +19,7 @@ export default function Home() {
               "/hero-bg.png";
           }}
         />
-        {/* Overlay dark translucent layer for contrast */}
-        <div className="absolute inset-0 bg-black/10"></div>
-
-        {/* Content */}
+        <div className="absolute inset-0 bg-black/5"></div>
         <main className="relative z-10 flex flex-col items-center justify-end max-sm:justify-center h-full text-center py-7 px-6 md:px-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.7 }}
@@ -41,7 +38,7 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
             className="text-white text-4xl max-lg:text-3xl max-sm:text-xl font-semibold tracking-wide mb-2"
           >
-            ART IN FOCUS
+            Crafting Digital Worlds
           </motion.h2>
 
           <motion.div
@@ -52,13 +49,9 @@ export default function Home() {
             style={{ gap: '0.5rem' }}
           >
             <h1 className="flex items-center text-center uppercase font-bold text-white leading-tight space-x-7 max-sm:space-x-4">
-              <span className="flex justify-center items-center">
-                <span className="text-[clamp(3rem,12vw,12rem)]">Y</span>
-                <span className="mx-2 border-32 border-white rounded-full w-[2em] h-[0.8em] max-xl:w-[1.5em] max-lg:w-[1em] max-lg:border-20 max-lg:h-[0.5em] block max-md:hidden"></span>
-                <span className="text-[clamp(3rem,12vw,12rem)] hidden max-md:block">O</span>
-                <span className="text-[clamp(3rem,12vw,12rem)]">UR</span>
+              <span className="flex justify-center items-center gap-9">
+                <span className="text-[clamp(3rem,12vw,12rem)]">Beyond Design</span>
               </span>
-              <span className="text-[clamp(3rem,12vw,12rem)]">STORY</span>
             </h1>
           </motion.div>
           <motion.p
@@ -67,7 +60,7 @@ export default function Home() {
             transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
             className="mt-2 text-5xl max-lg:text-4xl max-sm:text-2xl italic font-serif text-[#FFE4AE] select-none"
           >
-            Captured
+            & Code
           </motion.p>
         </main>
       </div>

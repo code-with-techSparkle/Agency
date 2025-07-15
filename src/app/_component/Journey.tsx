@@ -46,7 +46,7 @@ export default function Journey() {
         <div className='w-full font-sans font-medium text-black px-24 max-lg:px-14 max-sm:px-6 py-10 max-md:py-0'>
             <div className='w-full flex border-b-2 border-black max-lg:flex-col'>
                 <div className='w-[40%] max-lg:w-full pb-36 max-lg:pb-16 max-sm:pb-10'>
-                    <div className='sticky top-10'>
+                    <div className='sticky top-24'>
                         <div className='flex justify-start items-center gap-3 pb-6 text-2xl max-md:text-lg'>
                             <span className='w-3 h-3 bg-black rounded-full'></span>
                             <h1>Journey</h1>
