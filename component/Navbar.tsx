@@ -56,20 +56,18 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        burgerMenuActive
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${burgerMenuActive
           ? ""
           : scrolled
-          ? "bg-white/70 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
+            ? "bg-white/70 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
+        }`}
     >
       <div className="flex justify-between items-center px-10 py-6 max-md:px-6 max-sm:px-4">
         <Link href="/" className="flex items-center gap-2 z-50">
           <span
-            className={`text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-lg font-semibold transition-colors duration-300 ${
-              burgerMenuActive ? "text-white" : "text-black"
-            }`}
+            className={`text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-lg font-semibold transition-colors duration-300 ${burgerMenuActive ? "text-white" : "text-black"
+              }`}
           >
             M.Tuaha
           </span>
@@ -80,23 +78,20 @@ const Navbar = () => {
           onClick={toggleBurgerMenu}
         >
           <span
-            className={`absolute h-0.5 w-full left-0 transform transition-all duration-300 ${
-              burgerMenuActive ? "top-1/2 rotate-45 bg-white" : "top-0 bg-black"
-            }`}
+            className={`absolute h-0.5 w-full left-0 transform transition-all duration-300 ${burgerMenuActive ? "top-1/2 rotate-45 bg-white" : "top-0 bg-black"
+              }`}
           ></span>
           <span
-            className={`absolute h-0.5 w-full left-0 transition-all duration-300 ${
-              burgerMenuActive
+            className={`absolute h-0.5 w-full left-0 transition-all duration-300 ${burgerMenuActive
                 ? "opacity-0 bg-white top-1/2"
                 : "top-1/2 -translate-y-1/2 bg-black"
-            }`}
+              }`}
           ></span>
           <span
-            className={`absolute h-0.5 w-full left-0 transform transition-all duration-300 ${
-              burgerMenuActive
+            className={`absolute h-0.5 w-full left-0 transform transition-all duration-300 ${burgerMenuActive
                 ? "top-1/2 -rotate-45 bg-white"
                 : "bottom-0 bg-black"
-            }`}
+              }`}
           ></span>
         </div>
       </div>
@@ -104,26 +99,28 @@ const Navbar = () => {
       <motion.div
         initial={false}
         animate={burgerMenuActive ? "open" : "closed"}
-        className={`fixed inset-0 bg-black transition-opacity duration-500 ${
-          burgerMenuActive
+        className={`fixed inset-0 bg-black transition-opacity duration-500 ${burgerMenuActive
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        }`}
+          }`}
       >
         <motion.ul
           className="absolute top-[30vh] left-1/2 -translate-x-1/2 text-center"
           variants={menuVariants}
         >
-          {["home", "Projects", "Our Mission", "contact"].map((text, idx) => (
-            <motion.li
-              key={idx}
-              variants={listItemVariants}
-              className="py-4 text-white text-5xl max-lg:text-4xl max-sm:text-3xl font-semibold capitalize hover:scale-105 transition-transform duration-500"
-              onClick={() => setBurgerMenuActive(false)}
-            >
-              <Link href={`#${text}`}>{text}</Link>
-            </motion.li>
-          ))}
+          {["Home", "Projects", "Our Mission", "contact"].map((text, idx) => {
+            const path = text === "Home" ? "/" : `/${text.toLowerCase().replace(/\s+/g, '-')}`;
+            return (
+              <motion.li
+                key={idx}
+                variants={listItemVariants}
+                className="py-4 text-white text-5xl max-lg:text-4xl max-sm:text-3xl font-semibold capitalize hover:scale-105 transition-transform duration-500"
+                onClick={() => setBurgerMenuActive(false)}
+              >
+                <Link href={path}>{text}</Link>
+              </motion.li>
+            );
+          })}
         </motion.ul>
       </motion.div>
     </div>

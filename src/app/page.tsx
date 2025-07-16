@@ -7,8 +7,6 @@ import Project from './_component/Project'
 import Sticky from './_component/Sticky'
 import Journey from './_component/Journey'
 import Team from './_component/Team'
-import Navbar from '../../component/Navbar'
-import Footer from '../../component/Footer'
 import Faq from './_component/Faq'
 
 const page = () => {
@@ -55,7 +53,6 @@ const page = () => {
 
   return (
     <>
-    <Navbar />
     <div className='w-full h-full sticky top-0'>
         <Hero />
     </div>
@@ -68,7 +65,6 @@ const page = () => {
       <Project />
       <Team />
       <Faq faqInformation={regularFaqData} />
-      <Footer />
     </div>
     </>
   )

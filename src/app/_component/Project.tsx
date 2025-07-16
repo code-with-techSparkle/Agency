@@ -1,4 +1,6 @@
+
 import ProductLayout from './ProductLayout'
+import Button from '../../../component/Button'
 
 const Project = () => {
     return (
@@ -14,6 +16,9 @@ const Project = () => {
                 <ProductLayout name='Other Portfolio' project='https://ik.imagekit.io/qss3mmw4a/Agency/website-8.png?updatedAt=1752592396814' link='https://tuaha.vercel.app/' />
                 <ProductLayout name='Gymlytic' project='https://ik.imagekit.io/qss3mmw4a/Agency/website-2.png?updatedAt=1752592398311' link='https://gymlytic.prodigi-studios.com/' />
                 <ProductLayout name='E-commerce' project='https://ik.imagekit.io/qss3mmw4a/Agency/website-3.png?updatedAt=1752592397921' link='https://saadshopifyweb.vercel.app/' />
+            </div>
+            <div className='w-full h-full flex justify-center items-center pt-10'>
+                <Button text='View Projects' link='/projects' />
             </div>
         </div>
     )

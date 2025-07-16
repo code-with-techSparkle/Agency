@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion, Variants, Transition } from 'framer-motion'
+import Link from 'next/link'
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
@@ -10,7 +11,7 @@ const fadeUp: Variants = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: [0.42, 0, 0.58, 1], 
+      ease: [0.42, 0, 0.58, 1],
     } as Transition,
   }),
 }
@@ -33,15 +34,18 @@ export default function Footer() {
               {[
                 {
                   heading: "Pages",
-                  links: ["Home", "Projects", "Our Mission", "Contact Us"]
+                  links: ["Home", "Projects", "Our Mission", "Contact"],
+                  href: ["/", "/projects", "/our-mission", "/contact"]
                 },
                 {
                   heading: "Technologies",
-                  links: ["Next.js", "React,js", "Tailwind css", "Framer motion"]
+                  links: ["Next.js", "React,js", "Tailwind css", "Framer motion"],
+                  href: ["/", "/", "/", "/"]
                 },
                 {
                   heading: "No code",
-                  links: ["Framer website's", "Modern Design", "Advance Animation's", "Responsive"]
+                  links: ["Framer website's", "Modern Design", "Advance Animation's", "Responsive"],
+                  href: ["/", "/", "/", "/"]
                 }
               ].map((section, index) => (
                 <motion.div
@@ -61,17 +65,17 @@ export default function Footer() {
                       variants={fadeUp}
                       custom={index + i + 1}
                     >
-                      <p className="transition-colors duration-300 group-hover:text-white/80">
+                      <Link href={section.href[i]} className="transition-colors duration-300 group-hover:text-white/80">
                         {link}
-                      </p>
+                      </Link>
                       <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
                     </motion.div>
                   ))}
                 </motion.div>
               ))}
+
             </motion.div>
 
-            {/* Footer Bottom */}
             <div className='flex justify-between items-end mt-20 flex-wrap gap-6'>
               <motion.h1
                 className='text-[10vw] leading-[0.85] font-bold text-white/10 uppercase'

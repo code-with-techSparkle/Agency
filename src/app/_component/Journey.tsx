@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Button from '../../../component/Button'
 
 export default function Journey() {
 
@@ -44,36 +45,41 @@ export default function Journey() {
 
     return (
         <div className='w-full font-sans font-medium text-black px-24 max-lg:px-14 max-sm:px-6 py-10 max-md:py-0'>
-            <div className='w-full flex border-b-2 border-black max-lg:flex-col'>
-                <div className='w-[40%] max-lg:w-full pb-36 max-lg:pb-16 max-sm:pb-10'>
-                    <div className='sticky top-24'>
-                        <div className='flex justify-start items-center gap-3 pb-6 text-2xl max-md:text-lg'>
-                            <span className='w-3 h-3 bg-black rounded-full'></span>
-                            <h1>Journey</h1>
+            <div className='w-full flex flex-col pb-10 border-b-2 border-black max-lg:flex-col'>
+                <div className='w-full flex max-lg:flex-col'>
+                    <div className='w-[40%] max-lg:w-full '>
+                        <div className='sticky top-24'>
+                            <div className='flex justify-start items-center gap-3 pb-6 text-2xl max-md:text-lg'>
+                                <span className='w-3 h-3 bg-black rounded-full'></span>
+                                <h1>Journey</h1>
+                            </div>
+                            <h2 className='text-7xl tracking-[2px] max-2xl:text-6xl max-lg:text-5xl max-md:text-4xl'>MY CAREER JOURNEY</h2>
                         </div>
-                        <h2 className='text-7xl tracking-[2px] max-2xl:text-6xl max-lg:text-5xl max-md:text-4xl'>MY CAREER JOURNEY</h2>
+                    </div>
+                    <div className='w-[60%] sticky pl-16 max-lg:w-full max-lg:pl-0'>
+                        {experience.map((l, i) => {
+                            return (
+                                <div key={i} className='pt-7'>
+                                    <div className='relative overflow-auto w-full h-[3px] bg-[#929292] mb-5 rounded-full'>
+                                        <motion.div initial={{ width: 0 }}
+                                            whileInView={{ width: "100%" }}
+                                            viewport={{ margin: "0px 0px -50% 0px", once: false }}
+                                            transition={{ duration: 1, ease: "easeInOut" }} className='absolute h-full bg-black rounded-full'></motion.div>
+                                    </div>
+                                    <div className='flex justify-start items-center font-normal text-2xl max-sm:text-lg gap-3'>
+                                        <span className='w-3 h-3 rounded-full bg-black'></span>
+                                        <h1>{l.date}</h1>
+                                    </div>
+                                    <h1 className='text-6xl mt-16 max-lg:text-4xl max-sm:text-3xl'>{l.title}</h1>
+                                    <p className='text-2xl font-normal mt-4 mb-7 max-lg:text-xl max-sm:text-sm'>{l.about}</p>
+                                    <p className='text-2xl font-normal mt-4 pb-32 max-md:pb-16 max-lg:text-xl'>{l.description}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
-                <div className='w-[60%] sticky pl-16 max-lg:w-full max-lg:pl-0'>
-                    {experience.map((l, i) => {
-                        return (
-                            <div key={i} className='pt-7'>
-                                <div className='relative overflow-auto w-full h-[3px] bg-[#929292] mb-5 rounded-full'>
-                                    <motion.div initial={{ width: 0 }}
-                                        whileInView={{ width: "100%" }}
-                                        viewport={{ margin: "0px 0px -50% 0px", once: false }}
-                                        transition={{ duration: 1, ease: "easeInOut" }} className='absolute h-full bg-black rounded-full'></motion.div>
-                                </div>
-                                <div className='flex justify-start items-center font-normal text-2xl max-sm:text-lg gap-3'>
-                                    <span className='w-3 h-3 rounded-full bg-black'></span>
-                                    <h1>{l.date}</h1>
-                                </div>
-                                <h1 className='text-6xl mt-16 max-lg:text-4xl max-sm:text-3xl'>{l.title}</h1>
-                                <p className='text-2xl font-normal mt-4 mb-7 max-lg:text-xl max-sm:text-sm'>{l.about}</p>
-                                <p className='text-2xl font-normal mt-4 pb-36 max-md:pb-16 max-lg:text-xl'>{l.description}</p>
-                            </div>
-                        )
-                    })}
+                <div className='w-full h-full flex justify-center items-center pt-10'>
+                    <Button text='Our Mission' link='/our-mission' />
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google"
 import "./globals.css";
 import LenisScroll from "./_component/LenisScroll";
+import Navbar from "../../component/Navbar";
+import Footer from "../../component/Footer";
 
 
 const playfair = Playfair_Display({ 
@@ -26,7 +28,9 @@ export default function RootLayout({
         className={`${playfair.variable} antialiased`}
       >
         <LenisScroll />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
