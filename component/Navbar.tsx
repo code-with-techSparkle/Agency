@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import JellyText from "@/app/our-mission/_component/JellyText";
 
 const Navbar = () => {
   const [burgerMenuActive, setBurgerMenuActive] = useState(false);
@@ -54,13 +55,16 @@ const Navbar = () => {
     },
   };
 
+  
+  const sectence = "M.Tuaha".split("")
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${burgerMenuActive
-          ? ""
-          : scrolled
-            ? "bg-white/70 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+        ? ""
+        : scrolled
+          ? "bg-white/70 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
         }`}
     >
       <div className="flex justify-between items-center px-10 py-6 max-md:px-6 max-sm:px-4">
@@ -69,7 +73,11 @@ const Navbar = () => {
             className={`text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-lg font-semibold transition-colors duration-300 ${burgerMenuActive ? "text-white" : "text-black"
               }`}
           >
-            M.Tuaha
+            {sectence.map((text, i) => (
+              <JellyText key={i}>
+                {text === '  ' ? '\u00A0' : text}
+              </JellyText>
+            ))}
           </span>
         </Link>
 
@@ -83,14 +91,14 @@ const Navbar = () => {
           ></span>
           <span
             className={`absolute h-0.5 w-full left-0 transition-all duration-300 ${burgerMenuActive
-                ? "opacity-0 bg-white top-1/2"
-                : "top-1/2 -translate-y-1/2 bg-black"
+              ? "opacity-0 bg-white top-1/2"
+              : "top-1/2 -translate-y-1/2 bg-black"
               }`}
           ></span>
           <span
             className={`absolute h-0.5 w-full left-0 transform transition-all duration-300 ${burgerMenuActive
-                ? "top-1/2 -rotate-45 bg-white"
-                : "bottom-0 bg-black"
+              ? "top-1/2 -rotate-45 bg-white"
+              : "bottom-0 bg-black"
               }`}
           ></span>
         </div>
@@ -100,8 +108,8 @@ const Navbar = () => {
         initial={false}
         animate={burgerMenuActive ? "open" : "closed"}
         className={`fixed inset-0 bg-black transition-opacity duration-500 ${burgerMenuActive
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
           }`}
       >
         <motion.ul
