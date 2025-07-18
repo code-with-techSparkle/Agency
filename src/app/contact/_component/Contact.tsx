@@ -1,31 +1,11 @@
 'use client';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ContactForm = () => {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    timeline: '',
-    budget: '',
-    info: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(form);
-    // Add your submission logic (e.g., API call)
-  };
-
   return (
     <div className="w-full min-h-screen px-6 md:px-16 py-24 bg-white text-black flex flex-col gap-16 items-center justify-center">
-      <h1 className='text-9xl font-bold text-center'>Contact Me </h1>
+      <h1 className='text-9xl max-lg:text-7xl max-md:text-6xl max-sm:text-4xl font-bold text-center'>Contact Me </h1>
       <form
-        onSubmit={handleSubmit}
         className="w-full max-w-3xl space-y-6"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -34,8 +14,6 @@ const ContactForm = () => {
             <input
               type="text"
               name="name"
-              value={form.name}
-              onChange={handleChange}
               placeholder="Name Surname"
               className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
               required
@@ -46,8 +24,6 @@ const ContactForm = () => {
             <input
               type="email"
               name="email"
-              value={form.email}
-              onChange={handleChange}
               placeholder="mail@company.com"
               className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
               required
@@ -58,8 +34,6 @@ const ContactForm = () => {
             <input
               type="text"
               name="timeline"
-              value={form.timeline}
-              onChange={handleChange}
               placeholder="2 weeks"
               className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
             />
@@ -69,8 +43,6 @@ const ContactForm = () => {
             <input
               type="text"
               name="budget"
-              value={form.budget}
-              onChange={handleChange}
               placeholder="$5.000, $10.000"
               className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
             />
@@ -81,8 +53,6 @@ const ContactForm = () => {
           <label className="block text-xs font-bold mb-1 uppercase tracking-wide">More Information</label>
           <textarea
             name="info"
-            value={form.info}
-            onChange={handleChange}
             placeholder="Hello, I'm looking for a Agency to help me out with..."
             rows={5}
             className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition resize-none"
